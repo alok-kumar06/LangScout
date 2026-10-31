@@ -100,7 +100,8 @@ Endpoints: `/health`, `/languages`, `/detect`, `/detect/batch`, `/detect/segment
 pip install -r requirements-dev.txt   # test and benchmark tools
 pytest                                # 46 tests
 python -m langscout.benchmark         # comparison with langid and langdetect
-python -m langscout.train             # about a minute; --deep adds Keras models (pip install -r requirements-deep.txt first)
+python -m langscout.train          # about a minute
+python -m langscout.train --deep   # adds Keras models (first: pip install -r requirements-deep.txt)
 ```
 
 The saved model needs scikit-learn 1.8.0 (pinned). With another version, run the training command once.
@@ -114,6 +115,8 @@ The saved model needs scikit-learn 1.8.0 (pinned). With another version, run the
 3. **Chunk long paragraphs** into sentences of at most 200 characters, so training text looks like what people type.
 4. **Features and model** - TF-IDF over character 1 to 3-grams and Naive Bayes, chosen on the validation set only.
 5. **Predict** - detect the script, keep only the languages that use it, predict, then return *ok*, *uncertain* or *unsupported*.
+
+**Project layout**
 
 ```text
 app.py              Streamlit app
