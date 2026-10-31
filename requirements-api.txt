@@ -1,0 +1,6 @@
+# Minimal dependencies for the REST API / Docker image (no Streamlit, pandas or TensorFlow needed)
+fastapi>=0.110
+uvicorn[standard]>=0.29
+scikit-learn==1.8.0
+joblib>=1.4
+numpy>=1.26

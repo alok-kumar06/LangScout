@@ -1,0 +1,3 @@
+# Only for `python -m langscout.train --deep` (Keras CNN / SimpleRNN benchmarks)
+-r requirements.txt
+tensorflow>=2.16
