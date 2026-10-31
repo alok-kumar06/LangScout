@@ -101,7 +101,7 @@ pip install -r requirements-dev.txt   # test and benchmark tools
 pytest                                # 46 tests
 python -m langscout.benchmark         # comparison with langid and langdetect
 python -m langscout.train             # about a minute
-python -m langscout.train --deep      # adds Keras models (first: pip install -r requirements-deep.txt)
+python -m langscout.train --deep      # adds Keras models (see requirements-deep.txt)
 ```
 
 The saved model needs scikit-learn 1.8.0 (pinned). With another version, run the training command once.
